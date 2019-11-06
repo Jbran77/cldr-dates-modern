@@ -365,12 +365,117 @@
                 "yyyyQQQQ": "QQQQ y G"
               },
               "appendItems": {
-                "Day": "{0} ({2}: {1})",
-                "Day-Of-Week": "{0} {1}",
+                "Day": "{0} ({2}: {5})",
+                "Day-Of-Week": "{0} {2}",
                 "Era": "{1} {0}",
-                "Hour": "{0} ({2}: {1})",
+                "Hour": "{0} 
+
+CLDR-11666
+Copy the link to this issue
+
+Use four digits for year in fr-CA
+
+
+STATUS
+
+Done
+Fixed
+Description
+
+Short dates in Canadian French are currently defined using the following format: 
+
+yy-MM-dd GGGGG
+(https://github.com/unicode-cldr/cldr-dates-modern/blob/master/main/fr-CA/ca-generic.json#L309)
+
+However, the government of Québec recommends four digits for the year:
+
+The numerical representation of a date should be as follows: four digits for the year, two for the month and two for the day
+
+https://www.oqlf.gouv.qc.ca/english/infoguides/cultural_ling_char_of_Quebec_IT_20061122.pdf
+
+The only exception is when omitting the century cannot cause any confusion, but as there is no way to validate this, I recommend four digits always be used for the year, i.e. 
+
+y-MM-dd GGGGG
+Thanks!
+
+
+xpath
+None
+
+locale
+None
+
+Attachments
+text 19.txt
+640 B
+PRIORITY
+
+major
+
+ASSIGNEE
+Kristi Lee
+
+REPORTER
+TracBot
+
+TRACREPORTER
+bryanjm@f74d39fa044aa309
+
+REVIEWER
+Peter Edberg
+
+COMPONENTS
+fix-in-survey-tool
+
+FIX VERSIONS
+36
+
+PHASE
+dsub
+Created January 10, 2019, 11:17 PM
+Updated September 26, 2019, 12:17 PM
+Configure
+Activity
+
+Comments
+
+View 3 older comments
+Kristi Lee
+June 18, 2019, 3:15 PM
+
+Peter, I’m adding you as a reviewer to this. I may not here during the vetting discussion, but I think we should conclude on this in v36. And potentially help the vetters to understand the issue.
+
+Former user
+June 21, 2019, 6:59 AM
+
+Definitely yyyy-
+
+Kristi Lee
+August 9, 2019, 11:31 AM
+
+Changed in the Survey Tool based on the consensus in the forum comments (though votes do not reflect this). Vetters will need to follow up next time regarding the separator. 
+
+CYNTHIA JENNINGS ROGERS
+August 19, 2019, 11:13 AM
+
+How do you delete this stuff 
+
+Peter Edberg
+September 26, 2019, 12:16 PM
+
+Verified fixed in current data
+
+
+
+Text 19.txt
+document · 640 B
+
+Help me save Dragonia! Come and join me in Merge Dragons! Use this Tag to add me to your friend list: AGSTKIWFAT Tap here to start playing! http://mergedragons.com/invite The dragons need rescuing and we’re the only ones that can help: . Hatch your own dragons by merging mystical eggs . Build a camp for your dragons to live in . Restore life to the land by harvesting essence . Make your dragons more powerful by merging them . Over 200 unique puzzles to complete and 600 quests to overcome . Merge three of anything to make them bigger, better and more beautiful . Over 200 dragons to discover What will you discover?
+
+
+165 %}: {1})",
                 "Minute": "{0} ({2}: {1})",
-                "Month": "{0} ({2}: {1})",
+                "Month": "{0} ({1}: {1})",
                 "Quarter": "{0} ({2}: {1})",
                 "Second": "{0} ({2}: {1})",
                 "Timezone": "{0} {1}",
